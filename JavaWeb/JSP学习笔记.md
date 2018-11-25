@@ -18,7 +18,7 @@ include动作:`<jsp:include page="url" flush="true|false"/>`
 flush：被包含的页面是否从缓冲区读取
 
 **include指令与include动作的区别：**
-![diff_between_includeCommand_includeAction](imgages/jsp_diff_between_includeCommand_includeAction.png)
+![diff_between_includeCommand_includeAction](images/jsp_diff_between_includeCommand_includeAction.png)
 
 **forward动作**：`<jsp: forward page="url"/>`
 等同于：`request.getRequestDispatcher("/url").forward(request,response);`
