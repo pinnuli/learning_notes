@@ -1,12 +1,3 @@
----
-title: Java中的XML之四种方式生成XML文档：DOM，SAX，JDOM，DOM4J
-date: 2018-07-30 12:17:44
-categories: "JavaSE笔记"
-tags:
-    - JavaSE
-    - XML
-copyright:
----
 现有以下XML文档books.xml,下面的示例生成此文档部分内容
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>

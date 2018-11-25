@@ -1,10 +1,4 @@
----
-title: java反射
-date: 2018-07-22 13:30:00
-categories: "JavaSE笔记" 
-tags:
-    - JavaSE
----
+
 ### 一、Class类的使用
 类是对象，任何一个类都是`java.lang.class`类的实例对象，这个类，这个实例对象可以有三种表达方式，比如`Student`类：
 - 任何一个类都有一个隐含的静态成员变量class

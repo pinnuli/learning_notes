@@ -1,10 +1,4 @@
----
-title: java Socket应用
-date: 2018-07-21 15:09:14
-categories: "JavaSE笔记" 
-tags:
-    - JavaSE
----
+
 ###  一、Socket使用时应当注意的一些问题
 1.设置超时，从套接字读取信息时，在有数据可供访问之前，读操作会被阻塞，如果此时主机不可达，那么程序将会等待很长时间，并因为系统操作系统的限制最终导致超时
 
@@ -272,5 +266,6 @@ socket.close();
 > 当Socket关闭时，输入输出流也就关闭了
 
 > 参阅：
-  [慕课网：Java Socket应用---通信是这样练成的](https://www.imooc.com/learn/161)
+  [慕课网：Java Socket应用---通信是这样练成的](https://www.imooc.com/learn/161) 
+  
   [java核心技术 卷II：高级特性](http://product.dangdang.com/25171892.html)

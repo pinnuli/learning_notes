@@ -1,12 +1,3 @@
----
-title: Java中的XML之与HTML的区别验证，定位信息，命名空间
-date: 2018-07-30 12:19:45
-categories: "JavaSE笔记"
-tags:
-    - JavaSE
-    - XML
-copyright:
----
 ### HTML与XML的区别
 - HTML对大小写不敏感，XML大小写敏感
 - HTML结束标签可以省略，如`</p>`，XML不能

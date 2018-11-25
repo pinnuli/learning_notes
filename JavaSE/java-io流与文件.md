@@ -1,10 +1,3 @@
----
-title: java io流与文件
-date: 2018-07-19 06:27:55
-categories: "JavaSE笔记" 
-tags:
-	- JavaSE
----
 ### 一、流 
 **读写字节**
 `InputStream.read和OutpueStream.write`
