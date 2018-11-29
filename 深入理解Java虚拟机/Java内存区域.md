@@ -35,7 +35,7 @@
 #### 对象的访问定位
 > 取决于虚拟机的实现，主流的访问方式有两种：
 - **使用句柄**: Java堆中会划分出一块内存来作为句柄池，reference中存储的是对象的句柄地址，句柄中包含了对象实例数据与类型数据各自的具体地址信息
-![](/images/jvm_object_reference_handle.jpg)
+![](images/jvm_object_reference_handle.jpg)
 - **直接指针**: reference中存储的直接就是对象地址
-![](/images/jvm_object_reference_pointer.jpg)
+![](images/jvm_object_reference_pointer.jpg)
 
