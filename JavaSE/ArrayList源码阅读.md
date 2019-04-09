@@ -186,10 +186,7 @@ public void add(int index, E element) {
 }
 ```
 
-> 1. 检查下标是否越界
-2. 确保空间足够，又不浪费资源
-3. 参数说明：第一个是要复制的数组，第二个是从要复制的数组的第几个开始，第三个是复制到那，四个是复制到的数组第几个开始，最后一个是复制长度。
-
+1. 检查下标是否越界:
 
 ```java
 private void rangeCheckForAdd(int index) {
@@ -197,6 +194,10 @@ private void rangeCheckForAdd(int index) {
         throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
 }
 ```
+2. 确保空间足够，又不浪费资源  
+3. 参数说明：第一个是要复制的数组，第二个是从要复制的数组的第几个开始，第三个是复制到那，四个是复制到的数组第几个开始，最后一个是复制长度。
+
+
 
 - **addAll(Collection<? extends E> c)**：将一个集合的所有元素顺序添加（追加）到 lits 末尾
 
@@ -211,7 +212,7 @@ public boolean addAll(Collection<? extends E> c) {
 }
 ```
 
-> 1. 要添加的个数
+1. 要添加的个数
 2. 扩容
 
 - **addAll(int index, Collection<? extends E> c)**:在指定下标之后插入集合中的元素
@@ -235,7 +236,7 @@ public boolean addAll(int index, Collection<? extends E> c) {
 }
 ```
 
-> 1. 将集合中的元素转为数组
+1. 将集合中的元素转为数组  
 2. 要移动的数量
 
 #### 删除
@@ -257,7 +258,7 @@ public boolean addAll(int index, Collection<? extends E> c) {
     return oldValue;                        //4
 }
 ```
-> 1. 检查下标是否越界
+1. 检查下标是否越界
 2. 要移动的长度
 3. 将最后一个元素置空
 4. 返回删除的元素
@@ -283,7 +284,7 @@ public boolean remove(Object o) {
 }
 ```
 
-> 1. 快删除，跳过检查，不返回被删除的值
+1. 快删除，跳过检查，不返回被删除的值
 ```java
 private void fastRemove(int index) {
     modCount++;
@@ -304,7 +305,7 @@ public boolean removeAll(Collection<?> c) {
 }
 ```
 
-> 1. 判断集合是否为空，为空报NPE；
+1. 判断集合是否为空，为空报NPE；
 2. 批量删除c集合的元素,第二个参数是否采补集,如果true：移除list中除了c集合中的所有元素,如果false：移除list中c集合中的元素
 ```java
 private boolean batchRemove(Collection<?> c, boolean complement) {
@@ -337,7 +338,7 @@ private boolean batchRemove(Collection<?> c, boolean complement) {
 }
 ```
 
-> 1. 判断元素是否保留，complement是否采补集,如果true：移除list中除了c集合中的所有元素,如果false：移除list中c集合中的元素
+1. 判断元素是否保留，complement是否采补集,如果true：移除list中除了c集合中的所有元素,如果false：移除list中c集合中的元素
 2. 最后当r!=size表示可能出错了，将r后面的元素都复制到w之后
 3. 如果w == size，表示全部元素都保留了，所以也就没有删除操作发生，所以会返回false；反之，返回true，并更改数组； w!=size; 即使try抛出异常，也能正常处理异常抛出前的操作，因为w始终为要保留的前半部分，数组也不会因此乱序。
 
@@ -386,7 +387,7 @@ public boolean removeIf(Predicate<? super E> filter) {
     return anyToRemove;
 }
 ```
-> 1. 判断是否满足条件， 如果满足就将对应的下标存放到bitset中，并增加应移除元素的数量
+1. 判断是否满足条件， 如果满足就将对应的下标存放到bitset中，并增加应移除元素的数量
 2. 检查遍历过程中是否被外部改变
 3. 如果有要移除的元素，则获取bitset中置位0的下标，并将元素移到新位置
 4. 将剩余空间置空
@@ -400,7 +401,7 @@ public E get(int index) {
     return elementData(index);      //2
 }
 ```
-> 1. 检查数组是否越界，代码如下：
+1. 检查数组是否越界，代码如下：
 
 ```java
 private void rangeCheck(int index) {
@@ -485,7 +486,7 @@ public E set(int index, E element) {
 }
 ```
 
-> 1. 检查下标是否越界
+1. 检查下标是否越界
 2. 获取元素旧值
 3. 返回旧值
 
@@ -518,7 +519,7 @@ public void trimToSize() {
 }
 ```
 
-> 当实际大小 < 数组缓冲区大小时,比如调用默认构造函数后，刚添加一个元素，此时 elementData.length = 10，而 size = 1，通过这一步，可以使得空间得到有效利用，而不会出现资源浪费的情况。
+当实际大小 < 数组缓冲区大小时,比如调用默认构造函数后，刚添加一个元素，此时 elementData.length = 10，而 size = 1，通过这一步，可以使得空间得到有效利用，而不会出现资源浪费的情况。
 
 
 
@@ -538,7 +539,7 @@ public Object clone() {
 }
 ```
     
-> 1. Object 的克隆方法：会复制本对象及其内所有基本类型成员和 String 类型成员，但不会复制对象成员、引用对象;
+1. Object 的克隆方法：会复制本对象及其内所有基本类型成员和 String 类型成员，但不会复制对象成员、引用对象;
 2. 对需要进行复制的引用变量，进行独立的拷贝：将存储的元素移入新的 ArrayList 中
 
 - **toArray()**: 返回 ArrayList 的 Object 数组
@@ -563,4 +564,4 @@ public <T> T[] toArray(T[] a) {
 }
 ```
 
-> 1. 如果数组a的大小 < ArrayList的元素个数,则新建一个T[]数组。
+1. 如果数组a的大小 < ArrayList的元素个数,则新建一个T[]数组。
