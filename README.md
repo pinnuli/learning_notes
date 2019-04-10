@@ -11,7 +11,8 @@
 - [Java中的XML之与HTML的区别验证，定位信息，命名空间](./JavaSE/Java中的XML之与HTML的区别验证，定位信息，命名空间.md)
 - [Java中的XML之四种方式生成XML文档](./JavaSE/Java中的XML之四种方式生成XML文档：DOM，SAX，JDOM，DOM4J.md)
 - [Java中的XML之四种方式解析XML文档](./JavaSE/Java中的XML之四种方式解析XML文档：DOM，SAX，JDOM，DOM4J.md)
-- [ArrayList源码解析](./JavaSE/ArrayList源码.md)
+- [ArrayList源码解析](./JavaSE/ArrayList源码阅读.md)
+- [深入ArrayList看fast-fail机制](./JavaSE/深入ArrayList看fast-fail机制.md)
 
 ---
 

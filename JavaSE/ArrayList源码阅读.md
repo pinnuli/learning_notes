@@ -126,7 +126,7 @@ private void ensureExplicitCapacity(int minCapacity) {
 }
 
 ```
-1. 这里修改了modCount的值，至于modCount的作用，详见[fast-fail机制与集合中modCount的作用](./JavaSE/fast-fail机制与集合中modCount的作用.md)
+1. 这里修改了modCount的值，至于modCount的作用，详见[深入ArrayList看fast-fail机制](./JavaSE/深入ArrayList看fast-fail机制.md)
 2. 防止溢出代码：确保指定的最小容量大于数组缓冲区当前的长度
 3. 当当前合理的容量大于数组缓冲区的长度时，才真正调用grow(minCapacity)进行扩容
 
