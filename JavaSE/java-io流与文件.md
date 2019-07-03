@@ -128,8 +128,10 @@ public class LabeledPoint implements Serializable{
 	}
 }
 ```
-		
+
 当你只需要保存一部分域时，使用transient关键字就有点麻烦，那么可以通过实现`Externalizable`接口，指定要保存的域
+
+
 
 ```java
 public class Student implements Externalizable{
